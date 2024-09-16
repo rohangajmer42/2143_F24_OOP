@@ -1,12 +1,12 @@
-# 4883_F24_Prog_Tech
-4883-Programming-techniques
+# 2143_F24_OOP
+2143-Object-Oriented-Programming
 
 ---
 
 <h1 align="center">ROHAN GAJMER</h1>
 
 
-<h3 align="center">Repository:      4883_F24_Prog_Tech</h3>
+<h3 align="center">Repository:      2143_F24_OOP</h3>
 
 <p align="center">
   <a href="mailto:rgajmer0916@my.msutexas.edu">📧 rgajmer0916@my.msutexas.edu</a>  
@@ -15,7 +15,7 @@
 <p align="center">
      GitHub UserName:  rohangajmer42
   
- <center>Website:              <a href="https://github.com/rohangajmer42"> </center>
+ <center>Website:              <a href="https://github.com/rohangajmer42/2143_F24_OOP"> </center>
     <img src="https://img.shields.io/badge/-GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub">
   </a>
 
