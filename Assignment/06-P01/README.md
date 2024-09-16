@@ -12,7 +12,7 @@ This project is a **Fraction Calculator** that takes two fractions and an operat
   - Subtraction (`-`)
   - Multiplication (`*`)
   - Division (`/`)
-- Accepts input from standard input (keyboard or file redirection).
+- Accepts input from files.
 
 ### Files
 
