@@ -1,6 +1,8 @@
-# Fraction Calculator
+# 06-P01 - Fraction Calculator
+### Rohan Gajmer
 
-This is a simple **Fraction Calculator** program written in C++. The program performs basic arithmetic operations (addition, subtraction, multiplication, and division) on two fractions and outputs the result in the form of a fraction.
+### Description:
+This project is a **Fraction Calculator** that takes two fractions and an operator as input, performs the desired arithmetic operation (addition, subtraction, multiplication, or division), and prints the result as a fraction. The program uses overloaded operators in C++ to handle the arithmetic operations and simplifies the result if necessary.
 
 ## Features
 
@@ -11,3 +13,21 @@ This is a simple **Fraction Calculator** program written in C++. The program per
   - Multiplication (`*`)
   - Division (`/`)
 - Accepts input from standard input (keyboard or file redirection).
+
+### Files
+
+|   #   | File            | Description                                              |
+| :---: | --------------- | -------------------------------------------------------- |
+|   1   | main.cpp        | Main driver file that contains the Fraction class and logic to perform operations on fractions. |
+|   2   | data            | Example input file containing fractions and operators to test the calculator. |
+|   3   | output.txt      | Code given output. |
+
+
++------------+  
+| n1/d1 op n2/d2 |  
++------------+
+
+Where:
+- `n1/d1` is the first fraction.
+- `op` is the operator (`+`, `-`, `*`, `/`).
+- `n2/d2` is the second fraction.
