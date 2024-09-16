@@ -18,9 +18,9 @@ This project is a **Fraction Calculator** that takes two fractions and an operat
 
 |   #   | File            | Description                                              |
 | :---: | --------------- | -------------------------------------------------------- |
-|   1   | main.cpp        | Main driver file that contains the Fraction class and logic to perform operations on fractions. |
-|   2   | data            | Example input file containing fractions and operators to test the calculator. |
-|   3   | output.txt      | Code given output. |
+|   1   | [main.cpp](main.cpp)        | Main driver file that contains the Fraction class and logic to perform operations on fractions. |
+|   2   | [data](data)            | Example input file containing fractions and operators to test the calculator. |
+|   3   | [output.txt](output.txt)      | Code given output. |
 
 
 +------------+  
