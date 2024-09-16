@@ -1,0 +1,4 @@
+# Ignore the entire test folder
+test/
+# Ignore all .exe files
+*.exe
