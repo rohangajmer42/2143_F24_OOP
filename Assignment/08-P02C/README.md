@@ -1,4 +1,4 @@
-# P01 - KnuckleBones
+# 08-P02C - KnuckleBones (using SFML)
 
 ### Rohan Gajmer
 
