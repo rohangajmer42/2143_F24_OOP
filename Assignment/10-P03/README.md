@@ -183,3 +183,9 @@ KnuckleBones/
 
 
 ---
+
+## Game Screenshot
+
+![Game Screenshot](https://github.com/rohangajmer42/2143_F24_OOP/raw/main/Assignment/10-P03/KnuckleBones/assets/Image/Game_SS.png)
+
+---
