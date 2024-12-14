@@ -1,0 +1,3 @@
+/home/rohangajmer/KnuckleBones/build/CMakeFiles/KnuckleBones.dir
+/home/rohangajmer/KnuckleBones/build/CMakeFiles/edit_cache.dir
+/home/rohangajmer/KnuckleBones/build/CMakeFiles/rebuild_cache.dir
