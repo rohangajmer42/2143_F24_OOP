@@ -1,8 +1,8 @@
 ## Assignment 4 - Basic OOP terminology
 
-#### Due: 12-06-2024 (Last Day of Class)
-
 ## Link: https://github.com/rohangajmer42/2143_F24_OOP/wiki
+
+-----
 
 
 - To get a shot at full credit (100), you do the following:
