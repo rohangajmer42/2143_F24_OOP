@@ -111,5 +111,5 @@ Manages the overall game flow.
 
 ## Credits
 
-- **Developer:** Adapted by [Your Name]
+- **Developer:** Adapted by [Rohan Gajmer]
 - **Inspired by:** *Cult of the Lamb*
