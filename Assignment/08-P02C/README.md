@@ -1,108 +1,115 @@
-# 08-P02C - KnuckleBones (using SFML)
+# 08-P02C - KnuckleBones (using Ncurces)
 
 ### Rohan Gajmer
 
-KnuckleBones is a C++ game project featuring dice rolling, player management, score tracking, and interactive gameplay through a simple UI. It uses a modular structure with cleanly separated game logic components.
+## Overview
+
+KnuckleBones is a two-player dice game implemented using the `ncurses` library. The objective is to score more points than your opponent by strategically placing dice in a 3x3 grid. This implementation is inspired by the game from *Cult of the Lamb* and adapted for console-based play.
 
 ---
 
-## Files
+## Rules
 
-|   #   | File                          | Description                        |
-| :---: | ------------------------------ | ---------------------------------- |
-|   1   | CMakeLists.txt                | Build configuration file.         |
-|   2   | main.cpp                      | Entry point of the game.          |
-|   3   | Button.cpp / Button.hpp       | Manages the button UI system.     |
-|   4   | Dice.cpp / Dice.hpp           | Implements dice logic.            |
-|   5   | Game.cpp / Game.hpp           | Core game logic and rules.        |
-|   6   | Grid.cpp / Grid.hpp           | Manages the game grid.            |
-|   7   | Player.cpp / Player.hpp       | Handles player data tracking.     |
-|   8   | ScoreManager.cpp / ScoreManager.hpp | Calculates and tracks scores. |
-|   9   | .vscode/                     | Project settings for VSCode.     |
-|  10   | .gitignore                    | Excludes unwanted files.          |
-|  11   | README.md                     | Project documentation.            |
+### Boards
+- Each player has a 3x3 grid for placing dice.
+
+### Turn Order
+- Players alternate turns, rolling a 6-sided die and placing it in a column on their board.
+
+### Dice Placement
+- Dice are placed from the bottom up in a selected column.
+- Columns that are full cannot accept more dice.
+
+### Score Calculation
+- Each column's score depends on dice values and their frequency:
+  - Dice of the same value in a column multiply their value by the count of occurrences.
+  - **Example:** A column with dice `4-1-4` scores:
+    - `4x2 + 1x1 + 4x2 = 17`
+  
+### Opponent Dice Removal
+- Placing a die removes all dice of the same value from the corresponding column on the opponent's grid.
+
+### Game End
+- The game ends when either player fills their grid.
+- The player with the highest total score wins.
 
 ---
-
-
 
 ## Features
 
-- **Player Management:** Supports multiple players in competitive gameplay.
-- **Dice Mechanics:** Implements random dice rolling.
-- **Grid System:** Manages game grids dynamically.
-- **Score Tracking:** Tracks and updates scores in real-time.
-- **Interactive UI:** Simple button-based user interface.
+- **Dynamic Scoring:** Scores are updated after every turn with column-based multipliers.
+- **Opponent Strategy:** Dice placement can remove opponent dice in the corresponding column.
+- **Real-Time Updates:** Grids, scores, and current turns are updated dynamically.
+- **Endgame Condition:** The winner is announced when a grid is completely filled.
 
 ---
 
-## Installation
+## Controls
 
-### Prerequisites
-- **C++ Compiler** (GCC/Clang)
-- **CMake** (Version 3.10 or higher)
-- **Git** (For cloning the repository)
+- **1:** Start a new game.
+- **2:** Roll the dice.
+- **3:** Exit the game.
 
-### Steps
+### Column Selection
+- After rolling, press `1`, `2`, or `3` to select a column for dice placement.
 
-1. **Clone the Repository**
+---
+
+## Code Structure
+
+### 1. Grid Class
+Represents each player's 3x3 board.
+
+**Key Methods:**
+- `reset()` - Clears the grid.
+- `place_dice(int col, int value)` - Places a die in a specified column.
+- `remove_dice(int col, int value)` - Removes dice of a specific value from a column.
+- `calculate_column_score(int col)` - Calculates the score for a single column.
+- `calculate_total_score()` - Calculates the total score for the grid.
+- `is_full()` - Checks if the grid is completely filled.
+
+### 2. Game Class
+Manages the overall game flow.
+
+**Key Methods:**
+- `start()` - Starts the game loop.
+- `display_menu()` - Displays the game menu.
+- `display_turn()` - Shows the current player's turn.
+- `display_scores()` - Updates and shows the players' scores.
+- `animate_dice_roll()` - Animates the dice rolling process.
+- `handle_turn()` - Handles the current player's dice placement and score updates.
+- `declare_winner()` - Declares the winner at the end of the game.
+
+### 3. Main Function
+- Initializes `ncurses` and starts the game loop by creating a `Game` instance.
+
+---
+
+## How to Run
+
+1. **Compile the Code:**
    ```bash
-   git clone https://github.com/Rohangajmer42/KnuckleBones.git
+   g++ -o knucklebones_game knucklebones_game.cpp -lncurses
    ```
 
-2. **Build the Project**
+2. **Run the Game:**
    ```bash
-   cd KnuckleBones
-   mkdir build
-   cd build
-   cmake ..
-   make
+   ./knucklebones_game
    ```
 
-3. **Run the Game**
-   ```bash
-   ./KnuckleBones
-   ```
+3. **Follow On-Screen Instructions:** Play the game using the provided controls.
 
 ---
 
-## Technologies Used
+## Future Enhancements
 
-- **C++**: Core programming language
-- **CMake**: Build automation tool
-- **Git**: Version control system
-- **VSCode**: Recommended IDE for development
-
----
-
-3. **Common Errors:**
-   - Missing C++ compiler installation.
-   - Incorrect CMake version.
-   - Missing external libraries such as SFML.
-   - File path issues: Ensure relative paths are used correctly.
+- Add support for AI opponents.
+- Include additional difficulty levels.
+- Add a graphical interface using a more advanced library.
 
 ---
 
-## Project Structure
+## Credits
 
-```
-KnuckleBones/
-│
-├── CMakeLists.txt               # Build configuration
-├── main.cpp                     # Entry point
-│
-├── Button.cpp / Button.hpp      # Button UI system
-├── Dice.cpp / Dice.hpp          # Dice logic
-├── Game.cpp / Game.hpp          # Core game logic
-├── Grid.cpp / Grid.hpp          # Grid management
-├── Player.cpp / Player.hpp      # Player data tracking
-├── ScoreManager.cpp / ScoreManager.hpp # Score calculation
-│
-├── .vscode/                     # VSCode project setup
-├── .gitignore                   # Ignore unwanted files
-└── README.md                    # Project documentation
-```
-
-
-
----
+- **Developer:** Adapted by [Your Name]
+- **Inspired by:** *Cult of the Lamb*
